@@ -1,3 +1,4 @@
+use crate::myw;
 use leptos::task::spawn_local;
 use leptos::{ev::SubmitEvent, prelude::*};
 use serde::{Deserialize, Serialize};
@@ -47,7 +48,7 @@ pub fn App() -> impl IntoView {
 
     view! {
         <main class="container">
-        "你好"
+        <myw::icon::Myw/>
             // <h1>"Welcome to Tauri + Leptos"</h1>
 
             // <div class="row">
