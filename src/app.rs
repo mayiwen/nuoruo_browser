@@ -47,8 +47,14 @@ pub fn App() -> impl IntoView {
     // };
 
     view! {
-        <main class="container">
-        <myw::icon::Myw/>
+        <div style="height: 100%">
+        <div style="height: 40px; background: #eee;" data-tauri-drag-region>
+           </div>
+        </div>
+        // <main class="container">
+        // <myw::icon::Myw/>
+
+
             // <h1>"Welcome to Tauri + Leptos"</h1>
 
             // <div class="row">
@@ -70,6 +76,6 @@ pub fn App() -> impl IntoView {
             //     <button type="submit">"Greet"</button>
             // </form>
             // <p>{ move || greet_msg.get() }</p>
-        </main>
+        // </main>
     }
 }

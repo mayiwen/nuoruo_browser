@@ -13,9 +13,17 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "nuoruo_browser",
+        "title": "一文小说阅读器",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "minWidth": 400,
+        "minHeight": 300,
+        "resizable": true,
+        "fullscreen": false,
+        "decorations": false,
+        "center": true,
+        "devtools": true,
+        "label": "main"
       }
     ],
     "security": {

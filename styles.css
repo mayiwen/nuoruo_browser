@@ -1,112 +1,383 @@
 .logo.leptos:hover {
-  filter: drop-shadow(0 0 2em #a82e20);
+    filter: drop-shadow(0 0 2em #a82e20);
 }
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
 
-  color: #0f0f0f;
-  background-color: #f6f6f6;
+    color: #0f0f0f;
+    background-color: #f6f6f6;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 }
 
 .container {
-  margin: 0;
-  padding-top: 10vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+    margin: 0;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: 0.75s;
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: 0.75s;
 }
 
 .logo.tauri:hover {
-  filter: drop-shadow(0 0 2em #24c8db);
+    filter: drop-shadow(0 0 2em #24c8db);
 }
 
 .row {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
 }
 
 a:hover {
-  color: #535bf2;
+    color: #535bf2;
 }
 
 h1 {
-  text-align: center;
+    text-align: center;
 }
 
 input,
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  color: #0f0f0f;
-  background-color: #ffffff;
-  transition: border-color 0.25s;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    color: #0f0f0f;
+    background-color: #ffffff;
+    transition: border-color 0.25s;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 button:hover {
-  border-color: #396cd8;
+    border-color: #396cd8;
 }
 button:active {
-  border-color: #396cd8;
-  background-color: #e8e8e8;
+    border-color: #396cd8;
+    background-color: #e8e8e8;
 }
 
 input,
 button {
-  outline: none;
+    outline: none;
 }
 
 #greet-input {
-  margin-right: 5px;
+    margin-right: 5px;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    color: #f6f6f6;
-    background-color: #2f2f2f;
-  }
+    :root {
+        color: #f6f6f6;
+        background-color: #2f2f2f;
+    }
 
-  a:hover {
-    color: #24c8db;
-  }
+    a:hover {
+        color: #24c8db;
+    }
 
-  input,
-  button {
-    color: #ffffff;
-    background-color: #0f0f0f98;
-  }
-  button:active {
-    background-color: #0f0f0f69;
-  }
+    input,
+    button {
+        color: #ffffff;
+        background-color: #0f0f0f98;
+    }
+    button:active {
+        background-color: #0f0f0f69;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    padding: 0 1px;
+}
+
+body {
+    background-color: var(--myw-bc);
+    color: var(--myw-color);
+}
+p,
+span,
+button,
+input {
+    font-size: 16px;
+}
+
+html {
+    --myw-color: #515151;
+    /*颜色*/
+    --myw-border: #ccc;
+    /*边框*/
+    --myw-bc: #f7f7f7;
+    /*背景*/
+    --myw-boxBc: #f1f1f1;
+    /*一级盒子背景*/
+    --myw-activeBc: #e6e6e6;
+    /*一级盒子选中色*/
+    /* --myw-active: #4e6ef2; */
+    --myw-active: #3f85ff;
+    /*选中色*/
+    --myw-redDefault: #e74c3c;
+    /*红色悬停*/
+    --myw-redHover: #d64130;
+    /*红色悬停*/
+    --myw-redDisabled: #f3a69e;
+    /*红色禁用*/
+    --myw-blueDefault: #3f85ff;
+    /*蓝色悬停*/
+    --myw-blueHover: #2b77fc;
+    /*蓝色悬停*/
+    --myw-blueDisabled: #9fc2ff;
+    /*蓝色禁用*/
+    --myw-yellowDefault: #f1c40d;
+    /*黄色悬停*/
+    --myw-yellowHover: #e9bd0c;
+    /*黄色悬停*/
+    --myw-yellowDisabled: #f8e286;
+    /*黄色禁用*/
+}
+
+html[data-mayiwen-theme="black"] {
+    --myw-color: #afafaf;
+    /*颜色*/
+    --myw-border: #444;
+    /*边框*/
+    --myw-bc: #242424;
+    /*背景*/
+    --myw-boxBc: #333;
+    /* 一级盒子背景 */
+    --myw-activeBc: #393939;
+    /* 一级盒子选中色 */
+    /* --myw-active: #4e6ef2; */
+    --myw-active: #3f85ff;
+    /* 选中色 */
+    --myw-redDefault: #e74c3c;
+    /* 红色悬停 */
+    --myw-redHover: #d64130;
+    /* 红色悬停 */
+    --myw-redDisabled: #f3a69e;
+    /* 红色禁用 */
+    --myw-blueDefault: #3f85ff;
+    /* 蓝色悬停 */
+    --myw-blueHover: #2b77fc;
+    /* 蓝色悬停 */
+    --myw-blueDisabled: #9fc2ff;
+    /* 蓝色禁用 */
+    --myw-yellowDefault: #f1c40d;
+    /* 蓝色悬停 */
+    --myw-yellowHover: #e9bd0c;
+    /* 蓝色悬停 */
+    --myw-yellowDisabled: #f8e286;
+    /* 蓝色禁用 */
+}
+a {
+    color: var(--myw-blueHover);
+}
+
+.myw-button {
+    color: var(--myw-color);
+    background-color: var(--myw-boxBc);
+    border: 1px solid var(--myw-border);
+    height: 38px;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 0px 4px;
+    position: relative;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    min-width: 40px;
+
+    /* 多行文本截断 */
+    /* display: -webkit-box; */
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    /* 移除单行文本相关属性 */
+    /* white-space: nowrap; */ /* 注释掉或删除这一行 */
+    word-break: break-all;
+    box-sizing: border-box; /* 确保padding包含在高度内 */
+    user-select: none;
+    vertical-align: top;
+}
+
+a {
+    color: var(--myw-blueDefault);
+}
+
+.myw-button:hover {
+    background-color: var(--myw-activeBc);
+    color: var(--myw-active);
+}
+.myw-button.active {
+    background-color: var(--myw-activeBc);
+    color: var(--myw-active);
+    border: 1px solid var(--myw-border) !important;
+}
+.myw-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.myw-button:active {
+    transform: scale(0.9);
+}
+
+.myw-rotate {
+    animation: myw-rotate-frames 1s ease-in-out infinite;
+}
+
+.myw-input {
+    background-color: var(--myw-boxBc);
+    color: var(--myw-color);
+    border-radius: 4px;
+    padding: 0 4px;
+    height: 38px;
+    box-sizing: border-box;
+    border: 1px solid var(--myw-border);
+    outline: none;
+    margin-bottom: 8px;
+    width: 180px;
+}
+.myw-input:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+    pointer-events: none; /* 阻止所有鼠标事件（点击、悬停等） */
+}
+
+/* 隐藏数字输入框的增减按钮 */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox 兼容 */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+@keyframes myw-rotate-frames {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.routing-progress {
+    width: 100%;
+    height: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 5px;
+}
+.main {
+    height: 100%;
+}
+#main {
+    height: 100%;
+}
+
+.ellipsis {
+    white-space: nowrap; /* 防止文本换行 */
+    overflow: hidden; /* 隐藏溢出的内容 */
+    text-overflow: ellipsis; /* 显示省略号来代表被修剪的文本 */
+}
+
+::-webkit-scrollbar {
+    padding-top: 30px;
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(102, 102, 102, 0.7);
+    border-radius: 40px;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: var(--myw-bc);
+}
+
+/* 新增：Firefox 兼容样式 */
+html,
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(102, 102, 102, 0.7) transparent;
+}
+
+/* 可选：为特定容器添加顶部间距（模拟原来的 padding-top） */
+.scroll-with-padding {
+    padding-top: 30px;
+}
+
+.pa {
+    position: absolute;
+}
+
+.pr {
+    position: relative;
+}
+
+.myw-img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.myw-2-text {
+    border: 1px solid var(--myw-border);
+    padding: 0 4px;
+    /* 核心：跨浏览器2行省略样式 */
+    -webkit-line-clamp: 2; /* WebKit 2行限制 */
+    -webkit-box-orient: vertical; /* WebKit 垂直排列 */
+    line-clamp: 2; /* 标准属性（Firefox 支持） */
+    box-orient: vertical; /* 标准属性 */
+    overflow: hidden; /* 溢出隐藏 */
+    text-overflow: ellipsis; /* 省略号 */
+    word-break: break-all; /* 强制换行 */
+    max-height: calc(2 * 1.5em); /* 关键：限制最大高度（2行） */
+    line-height: 1.5em; /* 行高（需和max-height匹配） */
+    box-sizing: border-box;
+    user-select: none;
+}
+* {
+    word-break: break-all; /* 强制换行 */
 }
