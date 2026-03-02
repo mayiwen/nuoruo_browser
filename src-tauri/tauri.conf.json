@@ -13,7 +13,7 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "一文小说阅读器",
+        "title": "诺若浏览器",
         "width": 800,
         "height": 600,
         "minWidth": 400,

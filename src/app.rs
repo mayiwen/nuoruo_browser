@@ -49,6 +49,7 @@ pub fn App() -> impl IntoView {
     view! {
         <div style="height: 100%">
         <div style="height: 40px; background: #eee;" data-tauri-drag-region>
+         <i class="ri-home-line"></i> // 主页
            </div>
         </div>
         // <main class="container">
