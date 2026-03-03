@@ -40,6 +40,7 @@ pub fn Button(
     #[prop(optional, into)] active: Signal<bool>,
     // 按照官方文档风格添加点击事件prop（可选，FnMut(MouseEvent) + 'static）
     #[prop(optional)] on_click: Option<impl FnMut(MouseEvent) + 'static>,
+    // #[prop(optional, default = None)] on_click: Option<Callback<MouseEvent>>,
 ) -> impl IntoView {
     let border_style = move || {
         let border_value = border.get();

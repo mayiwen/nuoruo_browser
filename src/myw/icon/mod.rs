@@ -168,3 +168,20 @@ pub fn Close(
         </svg>
     }
 }
+
+#[component]
+pub fn Icon(
+    #[prop(default = 32)] size: usize,                  // 字体图标大小
+    #[prop(default = "")] style: &'static str,          // 额外样式
+    #[prop(optional, into)] class: MaybeSignal<String>, // 图标类名（支持响应式）
+) -> impl IntoView {
+    // 尺寸 = 字体大小
+    let font_size = format!("{}px", size);
+
+    // 合并基础样式 + 传入的额外样式
+    let final_style = format!("font-size: {font_size}; {style}");
+
+    view! {
+        <i class=class style=final_style></i>
+    }
+}

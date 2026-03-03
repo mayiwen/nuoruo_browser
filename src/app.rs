@@ -48,9 +48,9 @@ pub fn App() -> impl IntoView {
 
     view! {
         <div style="height: 100%">
-        <div style="height: 40px; background: #eee;" data-tauri-drag-region>
-         <i class="ri-home-line"></i> // 主页
-           </div>
+            <div style="height: 40px; background: #eee;" class="lh-40" data-tauri-drag-region>
+                <myw::button::Button on_click=|_|{}> "" <myw::icon::Icon size=30 class="ri-home-line" style="line-height: 40px"/></myw::button::Button>
+            </div>
         </div>
         // <main class="container">
         // <myw::icon::Myw/>

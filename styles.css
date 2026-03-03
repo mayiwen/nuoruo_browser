@@ -1,4 +1,4 @@
-.logo.leptos:hover {
+/*.logo.leptos:hover {
     filter: drop-shadow(0 0 2em #a82e20);
 }
 :root {
@@ -110,6 +110,7 @@ button {
         background-color: #0f0f0f69;
     }
 }
+*/
 
 * {
     margin: 0;
@@ -132,7 +133,6 @@ button,
 input {
     font-size: 16px;
 }
-
 html {
     --myw-color: #515151;
     /*颜色*/
@@ -208,7 +208,7 @@ a {
     color: var(--myw-color);
     background-color: var(--myw-boxBc);
     border: 1px solid var(--myw-border);
-    height: 38px;
+    height: 36px;
     font-size: 16px;
     line-height: 18px;
     padding: 0px 4px;
@@ -380,4 +380,7 @@ html,
 }
 * {
     word-break: break-all; /* 强制换行 */
+}
+.lh-40 {
+    line-height: 40px;
 }
