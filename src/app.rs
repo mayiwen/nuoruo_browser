@@ -49,9 +49,6 @@ pub fn App() -> impl IntoView {
     view! {
         <div style="height: 100%">
             <div style="height: 40px;" class="lh-40 pr" data-tauri-drag-region>
-                // <myw::button::Button on_click=|_|{}> "" <myw::icon::Icon size=30 class="ri-home-line" style="line-height: 40px"/></myw::button::Button>
-                // <myw::button::Button on_click=|_|{}> "" <myw::icon::Icon size=30 class="ri-close-large-fill" style="line-height: 40px"/></myw::button::Button>
-                //
                 <div style="padding-left: 8px; cursor: move;"  data-tauri-drag-region>  "诺若浏览器"</div>
 
                 <div style="right: 0; top: 1px" class="pa">
@@ -59,7 +56,6 @@ pub fn App() -> impl IntoView {
                     <myw::button::Button w=44 border="none" on_click=|_|{}> "" <myw::icon::Maximize /></myw::button::Button>
                     <myw::button::Button w=44 border="none" on_click=|_|{}> "" <myw::icon::Closer /></myw::button::Button>
                 </div>
-
             </div>
         </div>
         // <main class="container">
