@@ -185,3 +185,60 @@ pub fn Icon(
         <i class=class style=final_style></i>
     }
 }
+
+/// 最小化（清晰版）
+#[component]
+pub fn Minimize(
+    #[prop(default = 24)] wh: usize,
+    #[prop(default = String::new())] style: String,
+) -> impl IntoView {
+    let size = format!("{wh}px");
+    view! {
+        <svg xmlns="http://www.w3.org/2000/svg" view_box="0 0 24 24" fill="none" width=size.clone() height=size style=format!("vertical-align:middle;{style}")>
+            <path d="M4 12h12" stroke="currentColor" stroke_width="1.5" stroke_linecap="round" />
+        </svg>
+    }
+}
+
+/// 最大化（清晰版）
+#[component]
+pub fn Maximize(
+    #[prop(default = 24)] wh: usize,
+    #[prop(default = String::new())] style: String,
+) -> impl IntoView {
+    let size = format!("{wh}px");
+    view! {
+        <svg xmlns="http://www.w3.org/2000/svg" view_box="0 0 24 24" fill="none" width=size.clone() height=size style=format!("vertical-align:middle;{style}")>
+            <rect x="4" y="4" width="16" height="16" rx="1" stroke="currentColor" stroke_width="1.5" />
+        </svg>
+    }
+}
+
+/// 还原（清晰版）
+#[component]
+pub fn Restore(
+    #[prop(default = 16)] wh: usize,
+    #[prop(default = String::new())] style: String,
+) -> impl IntoView {
+    let size = format!("{wh}px");
+    view! {
+        <svg xmlns="http://www.w3.org/2000/svg" view_box="0 0 24 24" fill="none" width=size.clone() height=size style=format!("vertical-align:middle;{style}")>
+            <path d="M9 5H7a2 2 0 0 0-2 2v2m6 6h4a2 2 0 0 1 2 2v2m-6-8h2V9m-6 6v2" stroke="currentColor" stroke_width="1.5" stroke_linecap="round" />
+        </svg>
+    }
+}
+
+/// 关闭（清晰版）
+#[component]
+pub fn Closer(
+    #[prop(default = 24)] wh: usize,
+    #[prop(default = String::new())] style: String,
+) -> impl IntoView {
+    let size = format!("{wh}px");
+    view! {
+        <svg xmlns="http://www.w3.org/2000/svg" view_box="0 0 24 24" fill="none" width=size.clone() height=size style=format!("vertical-align:middle;{style}")>
+            // 👇 这是放大、饱满的叉号
+            <path d="M7 7L17 17M7 17L17 7" stroke="currentColor" stroke_width="1.5" stroke_linecap="round" />
+        </svg>
+    }
+}

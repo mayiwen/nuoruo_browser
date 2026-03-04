@@ -38,6 +38,8 @@ pub fn Button(
     #[prop(optional, into)] border: Signal<String>,
     #[prop(optional, into)] style: Signal<String>,
     #[prop(optional, into)] active: Signal<bool>,
+    #[prop(optional, into)] w: Signal<u16>,
+    #[prop(optional, into)] title: Signal<bool>,
     // 按照官方文档风格添加点击事件prop（可选，FnMut(MouseEvent) + 'static）
     #[prop(optional)] on_click: Option<impl FnMut(MouseEvent) + 'static>,
     // #[prop(optional, default = None)] on_click: Option<Callback<MouseEvent>>,
@@ -66,8 +68,10 @@ pub fn Button(
         <button
             class="myw-button"
             style:border=border_style
+            style:width=move ||{format!("{}px", w.get())}
             style=style
             class:active=move || active.get()
+            title=title
             // 绑定点击事件，和官方文档写法一致
             on:click=click_handler
         >
