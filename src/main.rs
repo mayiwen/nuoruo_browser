@@ -1,4 +1,5 @@
 mod app;
+pub mod page;
 use app::*;
 use leptos::prelude::*;
 pub mod models;
