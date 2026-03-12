@@ -1,5 +1,7 @@
 use std::{cell::RefCell, rc::Rc};
 
+use super::icon::Icon;
+use super::Gap;
 use leptos::{ev::MouseEvent, prelude::*};
 
 #[component]
@@ -38,6 +40,7 @@ pub fn Button(
     #[prop(optional, into)] border: Signal<String>,
     #[prop(optional, into)] style: Signal<String>,
     #[prop(optional, into)] active: Signal<bool>,
+    #[prop(optional, into)] is_close: Signal<bool>,
     #[prop(optional, into)] w: Signal<u16>,
     #[prop(optional, into)] title: Signal<bool>,
     // 按照官方文档风格添加点击事件prop（可选，FnMut(MouseEvent) + 'static）
@@ -68,7 +71,14 @@ pub fn Button(
         <button
             class="myw-button"
             style:border=border_style
-            style:width=move ||{format!("{}px", w.get())}
+            style: width = move || {
+                let w_val = w.get();
+                if w_val == 0 {
+                    None
+                } else {
+                    Some(format!("{}px", w_val))
+                }
+            }
             style=style
             class:active=move || active.get()
             title=title
@@ -76,6 +86,10 @@ pub fn Button(
             on:click=click_handler
         >
             {children()}
+            {move || is_close.get().then(|| view! {
+                <Gap w=9/>
+                <Icon class="ri-close-fill pa" style="right: 0; top: 0; font-size: 18px;"></Icon>
+            })}
         </button>
     }
 }

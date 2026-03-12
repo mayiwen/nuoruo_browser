@@ -1,4 +1,5 @@
 use super::button;
+use super::button::Button;
 use leptos::prelude::*;
 #[slot]
 #[derive(Debug)]
@@ -163,6 +164,17 @@ pub fn Tabs(
                     }
                 }
             }
+        </div>
+    }
+}
+#[component]
+pub fn TabsBrowser(// tab: Signal<Vec<Tab>>,
+    // id: RwSignal<u64>,
+    // #[prop(optional)] show_line: Option<bool>, // 改为 Option<bool>
+) -> impl IntoView {
+    view! {
+        <div style="display: flex">
+            <Button on_click=|_|{} is_close=true style="flex: 1">"你好"</Button>
         </div>
     }
 }
