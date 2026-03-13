@@ -174,7 +174,9 @@ pub fn TabsBrowser(// tab: Signal<Vec<Tab>>,
 ) -> impl IntoView {
     view! {
         <div style="display: flex">
-            <Button on_click=|_|{} is_close=true style="flex: 1">"你好"</Button>
+            <Button on_click=|_|{} is_close=true style="flex: 1" active=true>"马一文个人网站 mayiwen.com | 马一文 mayiwen | 建设纪录"</Button>
+            <Button on_click=|_|{} is_close=true style="flex: 1" active=true>"马一文个人网站 mayiwen.com | 马一文 mayiwen | 建设纪录"</Button>
+            <Button on_click=|_|{} is_close=true style="flex: 1" active=true>"马一文个人网站 mayiwen.com | 马一文 mayiwen | 建设纪录"</Button>
         </div>
     }
 }

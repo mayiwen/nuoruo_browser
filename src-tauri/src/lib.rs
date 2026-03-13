@@ -16,10 +16,45 @@ pub fn run() {
             #[cfg(any(windows, target_os = "macos", target_os = "linux"))]
             maximize_window,
             close_window,
+            // navigate_to,
         ])
+        // .setup(|app| {
+        //     // 获取主窗口
+        //     if let Some(main_window) = app.get_webview_window("main") {
+        //         // 1. 初始加载 mayiwen.com
+        //         main_window
+        //             .navigate("https://mayiwen.com")
+        //             .expect("Failed to navigate to initial URL");
+        //         // 2. 显示窗口
+        //         main_window.show().expect("Failed to show");
+        //         main_window.set_focus().expect("Failed to focus");
+        //         // 3. (可选) 设置初始标题
+        //         main_window.set_title("Browser - mayiwen.com").ok();
+        //     }
+        //     Ok(())
+        // })
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
+
+// 定义一个 Rust 命令，供前端调用
+// #[tauri::command]
+// fn navigate_to(window: tauri::WebviewWindow, url: String) -> Result<(), String> {
+//     // 确保 URL 有协议头，否则 WebView 可能无法识别
+//     let final_url = if url.starts_with("http://") || url.starts_with("https://") {
+//         url
+//     } else {
+//         format!("https://{}", url)
+//     };
+
+//     // 使用 Rust API 直接控制窗口导航
+//     window.navigate(&final_url).map_err(|e| e.to_string())?;
+
+//     // 可选：更新窗口标题
+//     window.set_title(&format!("Browser - {}", final_url)).ok();
+
+//     Ok(())
+// }
 
 #[cfg(any(
     windows,
@@ -49,6 +84,7 @@ fn maximize_window(window: tauri::Window) -> Result<(), String> {
     }
     Ok(())
 }
+
 #[tauri::command]
 fn close_window(_app_handle: AppHandle, window: tauri::Window) -> Result<(), String> {
     #[cfg(any(target_os = "windows", target_os = "macos", target_os = "linux"))]

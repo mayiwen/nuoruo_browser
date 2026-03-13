@@ -10,6 +10,10 @@
     "frontendDist": "../dist"
   },
   "app": {
+    "security": {
+      "csp": "default-src *; script-src * 'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline'; img-src * data:; connect-src *;",
+      "dangerousDisableAssetCspModification": true
+    },
     "withGlobalTauri": true,
     "windows": [
       {
@@ -25,10 +29,7 @@
         "devtools": true,
         "label": "main"
       }
-    ],
-    "security": {
-      "csp": null
-    }
+    ]
   },
   "bundle": {
     "active": true,

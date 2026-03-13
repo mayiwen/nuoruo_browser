@@ -4,7 +4,7 @@ use leptos::prelude::*;
 #[component]
 pub fn I() -> impl IntoView {
     view! {
-        <div style="height: 40px; padding-top: 1px; padding-left: 4px; display: flex" class="lh-40 pr">
+        <div style="height: 40px; padding-top: 1px; padding-left: 4px; display: flex; width: calc(100% - 8px)" class="lh-40 pr">
             <div style="width: 196px;">
                 <myw::button::Button w=44 border="both" on_click=|_|{}>
                 <myw::icon::Icon class="ri-arrow-left-line"/>
